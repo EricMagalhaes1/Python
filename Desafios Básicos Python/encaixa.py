@@ -1,23 +1,14 @@
-n = int(input())
 
 
-while n > 0:
+N = int(input("Digite o numero N: "))
 
-
-    values = input().split()
-
-
-    aux = ''
-    for digit in values[0][::-1]:
-        aux += digit
-        if aux == values[1][::-1]:
-            print('encaixa')
-            break
+while N > 0:
+    A = input("Digite o numero A: ")
+    B = input("Digite o numero B: ")
+    A_Tamanho = len(A)
+    B_Tamanho = len(B)
+    if A[A_Tamanho - B_Tamanho:A_Tamanho] == B:
+        print("encaixa")
     else:
-        print('nao encaixa')
-
-
-    aux = ''
-
-
-    n -= 1
+        print("nao encaixa")
+    N -= 1
